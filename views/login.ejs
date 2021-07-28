@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+	<link rel="stylesheet" href="../css/styleLogin.css">
+</head>
+<body>
+	<div class="join-container">
+		<header class="join-header">
+			<h1><i class="fas fa-smile"></i> Chat</h1>
+		</header>
+		<main class="join-main">
+		<form action="chat.html">
+	<div class="form-control">
+	<div class="login-form">
+		<h1>Login Chat Prueba</h1>
+		<form action="auth" method="POST">
+			<input type="text" name="username" id="username" placeholder="Usuario" autofocus required>
+			<input type="password" name="pass" placeholder="Contraseña" required>
+			<input type="submit" class="btn-login" value="Login">
+		</form>
+		<a href="register" class="btn-register">Register</a>
+		<div class="form-control">
+						<label for="room">Sala</label>
+						<select name="room" id="room" required>
+							<option value="JavaScript">JavaScript</option>
+							<option value="Python">Python</option>
+							<option value="PHP">PHP</option>
+							<option value="C#">C#</option>
+							<option value="Ruby">Ruby</option>
+							<option value="Java">Java</option>
+						</select>
+		</div>
+		
+		
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+   <% if (typeof alert != "undefined")  { %>
+    <script>
+    Swal.fire({
+      title:'<%= alertTitle %>',
+      text:'<%= alertMessage %>',
+      icon:'<%= alertIcon %>',
+      showConfirmButton: <%= showConfirmButton %>,
+      timer: <%= timer %>
+    }).then(()=>{
+      window.location='/<%= ruta %>'
+    })
+    </script>
+  <% } %>
+	</div>
+</body>
+</html>
